@@ -1,0 +1,44 @@
+// create and invoke user defined functions in javascript ;use var ,let ,and const for scope demonstration
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Function and Scope Demo</title>
+</head>
+<body>
+<h2>Check console for output</h2>
+<script>
+function scopeDemo() {
+  var x = 10;
+  if (true) {
+    var x = 20;
+    document.write("var inside block:", x+"<br>");
+  }
+  document.write("var outside block:", x+"<br>");
+  let y = 10;
+  if (true) {
+    let y = 20;
+    document.write("let inside block:", y+"<br>");
+  }
+  document.write("let outside block:", y+"<br>");
+  const z = 10;
+  if (true) {
+    const z = 20;
+    document.write("const inside block:", z+"<br>");
+  }
+  document.write("const outside block:", z+"<br>");
+}
+function greet(name) {
+  return "Hello, " + name;
+}
+const add = function(a, b) {
+  return a + b;
+};
+const multiply = (x, y) => x * y;
+document.write(greet("guysssss"+"<br>"));
+document.write(add(3, 4 +"<br>"));
+document.write(multiply(5, 6 +"<br>"));
+scopeDemo();
+</script>
+</body>
+</html>
